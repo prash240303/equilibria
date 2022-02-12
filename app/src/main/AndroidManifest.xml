@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.androrubin.reminderapp">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,7 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ReminderApp">
         <activity
-            android:name=".Profile_Activity"
+            android:name=".UploadPhoto"
+            android:exported="false" />
+        <activity
+            android:name=".CreateProfile"
+            android:exported="false" />
+        <activity
+            android:name=".ProfileActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
