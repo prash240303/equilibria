@@ -30,6 +30,8 @@ class UploadPhoto : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_upload_photo)
 
+        Toast.makeText(this,"Select an image to upload",Toast.LENGTH_LONG).show()
+
         mAuth = FirebaseAuth.getInstance()
         val user = mAuth.currentUser
         uid = user?.uid

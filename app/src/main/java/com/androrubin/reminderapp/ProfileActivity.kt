@@ -98,7 +98,9 @@ class ProfileActivity : AppCompatActivity() {
         }
 
         editProfileBtn.setOnClickListener {
-            Toast.makeText(this,"Clicked Edit Profile Button",Toast.LENGTH_SHORT).show()
+            val intent = Intent(this,EditProfile::class.java)
+            startActivity(intent)
+            finish()
         }
 
         editProfilePicBtn.setOnClickListener {
