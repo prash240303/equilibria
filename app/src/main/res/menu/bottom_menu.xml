@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Home"
-        android:id="@+id/homeFragment"
-        android:icon="@drawable/ic_baseline_home_24"
-        />
-    <item android:title="Pomodoro"
-        android:id="@+id/pomodoroFragment"
-        android:icon="@drawable/ic_baseline_timelapse_24"/>
-    <item android:title="Community"
+    <item
+        android:title="Communities"
         android:id="@+id/communityFragment"
         android:icon="@drawable/ic_baseline_people_outline_24"/>
-    <item android:title="Profile"
+    <item
+        android:title="Reminders"
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_bell"
+        android:iconTint="@color/black"/>
+    <item
+        android:title="Pomodoro"
+        android:id="@+id/pomodoroFragment"
+        android:icon="@drawable/ic_baseline_timelapse_24"/>
+    <item
+        android:title="Profile"
         android:id="@+id/profileFragment"
         android:icon="@drawable/ic_baseline_person_24"/>
 </menu>
