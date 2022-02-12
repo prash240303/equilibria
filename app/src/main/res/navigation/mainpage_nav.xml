@@ -22,7 +22,7 @@
         tools:layout="@layout/fragment_community" />
     <activity
         android:id="@+id/profileFragment"
-        android:name="com.androrubin.reminderapp.Profile_Activity"
+        android:name="com.androrubin.reminderapp.ProfileActivity"
         android:label="Profile"
         tools:layout="@layout/activity_profile" />
 </navigation>

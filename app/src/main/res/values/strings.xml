@@ -2,4 +2,16 @@
     <string name="app_name">Reminder App</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="branches">
+        <item>Chemical Engineering</item>
+        <item>Civil Engineering</item>
+        <item>Computer Science</item>
+        <item>Electronics &amp; Communications Engineering</item>
+        <item>Information Technology</item>
+        <item>Industrial &amp; Production Engineering</item>
+        <item>Instrumentation &amp; Control Engineering</item>
+        <item>Mechanical Engineering</item>
+        <item>Textile Engineering</item>
+    </string-array>
 </resources>

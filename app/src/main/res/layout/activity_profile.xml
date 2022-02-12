@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Profile_Activity"
+    tools:context=".ProfileActivity"
     tools:ignore="SpeakableTextPresentCheck">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -23,9 +23,10 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView
-                android:id="@+id/imageView5"
+                android:id="@+id/bannerPic"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:scaleType="fitXY"
                 app:srcCompat="@color/purple_700" />
 
         </androidx.cardview.widget.CardView>
@@ -71,10 +72,11 @@
                 app:cardCornerRadius="100dp">
 
                 <ImageView
-                    android:id="@+id/imageView4"
+                    android:id="@+id/profilePic"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@color/black" />
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/missing_profile_photo" />
             </androidx.cardview.widget.CardView>
         </androidx.cardview.widget.CardView>
 
@@ -141,7 +143,7 @@
             android:layout_marginTop="50dp"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtBranch">
+            app:layout_constraintTop_toBottomOf="@+id/txtBatchYear">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView5"
@@ -227,6 +229,27 @@
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="@+id/textView10"
             app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Batch Year"
+            app:layout_constraintStart_toStartOf="@+id/txtBranch"
+            app:layout_constraintTop_toBottomOf="@+id/txtBranch" />
+
+        <TextView
+            android:id="@+id/txtBatchYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_address"
+            android:drawablePadding="4dp"
+            android:drawableTint="#E91E63"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView11"
+            app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

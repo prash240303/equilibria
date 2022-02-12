@@ -80,15 +80,38 @@ class LoginActivity : AppCompatActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     Log.d("MainActivity2", "signInWithCredential:success")
                     Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
+                    val user = mAuth.currentUser
+                    val name = user?.displayName
 
-                    val dashboardIntent = Intent(this, MainActivity::class.java)
-                    startActivity(dashboardIntent)
-                    finish()
+                    db = FirebaseFirestore.getInstance()
+                    db.collection("Users").document("$name")
+                        .get()
+                        .addOnSuccessListener {
+
+                            //Returns value of corresponding field
+                            val b = it["ProfileCreated"].toString()
+
+                            if (b=="1") {
+
+
+                                val dashboardIntent = Intent(this, MainActivity::class.java)
+                                startActivity(dashboardIntent)
+                                finish()
+
+                            }
+                            else {
+
+                                val dashboardIntent = Intent(this,CreateProfile::class.java)
+                                startActivity(dashboardIntent)
+                                finish()
+                            }
+                }
                 }
                 else {
                     // If sign in fails, display a message to the user
                     Log.w("MainActivity2", "signInWithCredential:failure", task.exception)
                 }
             }
+
     }
 }
