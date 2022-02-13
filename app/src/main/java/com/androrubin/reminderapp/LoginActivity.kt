@@ -81,7 +81,7 @@ class LoginActivity : AppCompatActivity() {
                     Log.d("MainActivity2", "signInWithCredential:success")
                     Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
                     val user = mAuth.currentUser
-                    val name = user?.displayName
+                    val name = user?.uid
 
                     db = FirebaseFirestore.getInstance()
                     db.collection("Users").document("$name")
@@ -92,7 +92,6 @@ class LoginActivity : AppCompatActivity() {
                             val b = it["ProfileCreated"].toString()
 
                             if (b=="1") {
-
 
                                 val dashboardIntent = Intent(this, MainActivity::class.java)
                                 startActivity(dashboardIntent)
