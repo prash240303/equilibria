@@ -23,6 +23,10 @@
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/fragment_pomodoro.xml" value="0.21354166666666666" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/menu/bottom_menu.xml" value="0.25" />
+        <entry key="app/src/main/res/drawable-mdpi/ic_baseline_message_24.xml" value="0.155" />
+        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/community_list.xml" value="0.2953125" />
+        <entry key="app/src/main/res/layout/fragment_community.xml" value="0.2953125" />
       </map>
     </option>
   </component>

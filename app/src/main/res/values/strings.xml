@@ -3,6 +3,14 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="chat1">Chat Activity 1</string>
+    <string name="chat2">Chat Activity 2</string>
+    <string name="chat3">Chat Activity 3</string>
+    <string name="chat4">Chat Activity 4</string>
+    <string name="chat5">Chat Activity 5</string>
+    <string name="chat6">Chat Activity 6</string>
+    <string name="chat7">Chat Activity 7</string>
+
     <string-array name="branches">
         <item>Chemical Engineering</item>
         <item>Civil Engineering</item>

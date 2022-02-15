@@ -1,59 +1,111 @@
 package com.androrubin.reminderapp
 
+import android.app.PendingIntent.getActivity
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.internal.ContextUtils
+import com.google.android.material.internal.ContextUtils.getActivity
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [CommunityFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class CommunityFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+
+    private lateinit var newRecyclerView: RecyclerView
+    private lateinit var newArrayList: ArrayList<Community>
+    lateinit var imageId: Array<Int>
+    lateinit var heading: Array<String>
+    lateinit var chat: Array<String>
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
+
+
+
+        imageId = arrayOf(
+            R.drawable.a,
+            R.drawable.b,
+            R.drawable.c,
+            R.drawable.d,
+            R.drawable.e,
+            R.drawable.f,
+            R.drawable.g
+        )
+
+        heading = arrayOf(
+            "Community 1",
+            "Community 2",
+            "Community 3",
+            "Community 4",
+            "Community 5",
+            "Community 6",
+            "Community 7"
+
+        )
+
+        chat = arrayOf(
+            getString(R.string.chat1),
+            getString(R.string.chat2),
+            getString(R.string.chat3),
+            getString(R.string.chat4),
+            getString(R.string.chat5),
+            getString(R.string.chat6),
+            getString(R.string.chat7)
+
+        )
+
     }
+
+    fun onFabClick(view: View){
+        Toast.makeText(context,"Chat Clicked", Toast.LENGTH_LONG).show()
+    }
+
+    private fun getUserdata() {
+        for (i in imageId.indices){
+            val community  = Community(imageId[i], heading[i])
+            newArrayList.add(community)
+        }
+        var adapter = CommunityAdapter(newArrayList)
+        newRecyclerView.adapter = adapter
+
+//        newRecyclerView.adapter = CommunityAdapter(newArrayList)
+        adapter.setOnItemClickListener(object : CommunityAdapter.onItemClickListener{
+            override fun onItemClick(position: Int) {
+                val intent = Intent(getActivity(),ChatActivity::class.java)
+                intent.putExtra("chat",chat[position])
+                getActivity()?.startActivity(intent)
+
+            }
+
+        })
+
+
+    }
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
+        val view = inflater.inflate(R.layout.fragment_community, container, false)
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_community, container, false)
+        newRecyclerView = view.findViewById(R.id.recylerView1)
+        newRecyclerView.layoutManager = LinearLayoutManager(context)
+        newRecyclerView.setHasFixedSize(true)
+
+        newArrayList = arrayListOf<Community>()
+        getUserdata()
+        return view
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment CommunityFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            CommunityFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
+
+
 }
