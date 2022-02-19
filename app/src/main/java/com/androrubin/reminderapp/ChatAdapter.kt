@@ -36,7 +36,6 @@ class ChatAdapter(private val messageList:ArrayList<Message>) : RecyclerView.Ada
 
             val viewHolder = holder as SentViewHolder
             viewHolder.sentMessage.text = currentMessage.message
-            viewHolder.sender.text = "You"
             viewHolder.time.text = currentMessage.time?.toDate().toString()
 
         }else{
@@ -57,7 +56,6 @@ class ChatAdapter(private val messageList:ArrayList<Message>) : RecyclerView.Ada
     class SentViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
 
         val sentMessage = itemView.findViewById<TextView>(R.id.message2)
-        val sender = itemView.findViewById<TextView>(R.id.sender_name2)
         val time = itemView.findViewById<TextView>(R.id.time2)
 
     }
