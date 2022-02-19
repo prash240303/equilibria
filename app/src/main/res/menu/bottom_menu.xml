@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
+        android:title="Reminders"
+        android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_reminders"
+        android:iconTint="@color/black"/>
+    <item
         android:title="Communities"
         android:id="@+id/communityFragment"
         android:icon="@drawable/ic_baseline_people_outline_24"/>
-    <item
-        android:title="Reminders"
-        android:id="@+id/homeFragment"
-        android:icon="@drawable/ic_bell"
-        android:iconTint="@color/black"/>
     <item
         android:title="Pomodoro"
         android:id="@+id/pomodoroFragment"

@@ -11,34 +11,40 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
+        android:background="@drawable/chat_background"
         android:layout_above="@+id/linearLayout"
         android:layout_alignParentTop="true" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
         android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
         android:weightSum="100">
 
         <EditText
             android:id="@+id/messageBox"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:hint="Type a message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp"
-            android:paddingLeft="10dp"
+            android:layout_weight="70"
+            android:inputType="textMultiLine"
             android:background="@drawable/message_box_background"
-            android:layout_weight="85"/>
+            android:hint="Type a message"
+            android:padding="10dp"
+            android:textSize="18sp" />
 
         <ImageView
             android:id="@+id/sentButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/img"
-            android:layout_weight="20"/>
+            android:layout_weight="20"
+            android:layout_gravity="bottom"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_send" />
 
 
     </LinearLayout>

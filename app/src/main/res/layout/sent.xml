@@ -4,15 +4,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_gravity="end"
     android:layout_marginBottom="3dp">
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="end"
+        android:layout_height="wrap_content"
         android:background="@drawable/btn_background"
         android:orientation="vertical"
-        android:padding="6dp"
+        android:padding="9dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -24,16 +24,17 @@
             android:text="Sender"
             android:textStyle="bold"
             android:textColor="#FFEB3B"
-            android:textSize="14sp" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/message2"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="left"
             android:text="This message is sent"
             android:textColor="@color/white"
             android:textSize="18sp"
+            android:layout_marginBottom="8dp"
             android:textStyle="bold" />
 
         <TextView
@@ -42,7 +43,7 @@
             android:layout_height="wrap_content"
             android:gravity="end"
             android:text="Time"
-            android:textColor="#C5C4C4"
+            android:textColor="@color/white"
             android:textSize="12sp"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

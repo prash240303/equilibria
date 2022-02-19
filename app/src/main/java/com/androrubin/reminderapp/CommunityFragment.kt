@@ -36,7 +36,11 @@ class CommunityFragment : Fragment() {
             R.drawable.d,
             R.drawable.e,
             R.drawable.f,
-            R.drawable.g
+            R.drawable.g,
+            R.drawable.c,
+            R.drawable.d,
+            R.drawable.e,
+            R.drawable.f
         )
 
         heading = arrayOf(
@@ -46,8 +50,11 @@ class CommunityFragment : Fragment() {
             "Community 4",
             "Community 5",
             "Community 6",
-            "Community 7"
-
+            "Community 7",
+            "Community 8",
+            "Community 9",
+            "Community 10",
+            "Community 11"
         )
 
         chat = arrayOf(
@@ -58,7 +65,6 @@ class CommunityFragment : Fragment() {
             getString(R.string.chat5),
             getString(R.string.chat6),
             getString(R.string.chat7)
-
         )
 
     }
@@ -79,7 +85,7 @@ class CommunityFragment : Fragment() {
         adapter.setOnItemClickListener(object : CommunityAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
                 val intent = Intent(getActivity(),ChatActivity::class.java)
-                intent.putExtra("chat",chat[position])
+                intent.putExtra("chat",heading[position])
                 getActivity()?.startActivity(intent)
 
             }

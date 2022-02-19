@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.androrubin.reminderapp.HomeFragment"
-        android:label="Home"
+        android:label="Reminders"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/pomodoroFragment"
@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/communityFragment"
         android:name="com.androrubin.reminderapp.CommunityFragment"
-        android:label="Community"
+        android:label="Communities"
         tools:layout="@layout/fragment_community" />
     <activity
         android:id="@+id/profileFragment"
