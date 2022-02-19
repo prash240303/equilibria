@@ -10,10 +10,10 @@
         android:id="@+id/chatRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:background="@drawable/chat_background"
         android:layout_above="@+id/linearLayout"
-        android:layout_alignParentTop="true" />
+        android:layout_alignParentTop="true"
+        android:background="@drawable/chat_background"
+        android:padding="10dp" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
