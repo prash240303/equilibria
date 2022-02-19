@@ -5,8 +5,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#ebf9ff"
     android:layout_height="match_parent"
-    tools:context=".EditProfile">>
+    tools:context=".EditProfile">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -38,7 +39,7 @@
             android:layout_marginTop="20dp"
             android:drawableStart="@drawable/ic_baseline_person_24"
             android:drawablePadding="4dp"
-            android:drawableTint="#03B9A8"
+
             android:hint="Name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -53,7 +54,7 @@
             android:layout_marginTop="16dp"
             android:inputType="number"
             android:drawablePadding="4dp"
-            android:drawableTint="@color/purple_700"
+
             android:hint="Phone Number"
             app:drawableStartCompat="@drawable/ic_phone"
             app:layout_constraintEnd_toEndOf="parent"
@@ -71,7 +72,7 @@
             android:inputType="textEmailAddress"
             android:hint="Email id"
             app:drawableStartCompat="@drawable/ic_baseline_email_24"
-            android:drawableTint="@color/red"
+
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/edtPhone"
@@ -83,9 +84,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:drawableStart="@drawable/ic_baseline_people_outline_24"
+            android:drawableStart="@drawable/ic_people"
             android:drawablePadding="4dp"
-            android:drawableTint="#0B9421"
+
             android:hint="Batch Year"
             android:inputType="date"
             android:maxLength="4"
@@ -96,15 +97,15 @@
             tools:ignore="TouchTargetSizeCheck" />
 
 
-
-
-        <Button
+        <android.widget.Button
             android:id="@+id/btnSave"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="155dp"
+            android:layout_height="51dp"
             android:layout_marginTop="60dp"
             android:background="@drawable/btn_background"
             android:text="SAVE"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-medium"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"

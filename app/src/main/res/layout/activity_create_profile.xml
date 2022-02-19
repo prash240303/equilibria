@@ -5,8 +5,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#f2fbff"
     android:layout_height="match_parent"
-    tools:context=".CreateProfile">>
+    tools:context=".CreateProfile">
 
   <androidx.constraintlayout.widget.ConstraintLayout
       android:layout_width="match_parent"
@@ -38,9 +39,9 @@
         android:layout_marginTop="20dp"
         android:drawableStart="@drawable/ic_baseline_person_24"
         android:drawablePadding="4dp"
-        android:drawableTint="#03B9A8"
-        android:inputType="textPersonName"
+
         android:hint="Name"
+        android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,12 +52,11 @@
         android:id="@+id/edtPhone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:inputType="phone"
+        android:layout_marginTop="17dp"
         android:drawablePadding="4dp"
-        android:maxLength="10"
-        android:drawableTint="@color/purple_700"
         android:hint="Phone Number"
+        android:inputType="phone"
+        android:maxLength="10"
         app:drawableStartCompat="@drawable/ic_phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -68,12 +68,12 @@
         android:id="@+id/edtEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="18dp"
         android:drawablePadding="4dp"
-        android:inputType="textEmailAddress"
         android:hint="Email id"
+        android:inputType="textEmailAddress"
         app:drawableStartCompat="@drawable/ic_baseline_email_24"
-        android:drawableTint="@color/red"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/edtPhone"
@@ -84,10 +84,10 @@
         android:id="@+id/edtBatchYear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:drawableStart="@drawable/ic_baseline_people_outline_24"
+        android:layout_marginTop="18dp"
+        android:drawableStart="@drawable/ic_people"
         android:drawablePadding="4dp"
-        android:drawableTint="#0B9421"
+
         android:hint="Batch Year"
         android:inputType="date"
         android:maxLength="4"
@@ -98,17 +98,16 @@
         tools:ignore="TouchTargetSizeCheck" />
 
 
-
-
-    <Button
+    <android.widget.Button
         android:id="@+id/btnSave"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_width="190dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="96dp"
         android:background="@drawable/btn_background"
         android:text="SAVE"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
@@ -133,8 +132,8 @@
         app:layout_constraintTop_toBottomOf="@+id/edtBatchYear" />
 
     <Spinner
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:id="@+id/spBranches"
+        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:entries="@array/branches"

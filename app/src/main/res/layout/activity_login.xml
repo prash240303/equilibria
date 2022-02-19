@@ -4,32 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_backgrnd"
     tools:context=".LoginActivity">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/cardView"
+        android:layout_width="332dp"
 
-        app:cardCornerRadius="15dp"
+
+        android:layout_height="61dp"
+        android:layout_marginBottom="252dp"
+        app:cardCornerRadius="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.5">
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent">
 
         <TextView
             android:id="@+id/sign_in_btn"
-            android:layout_margin="5dp"
-            android:layout_width="wrap_content"
+            android:layout_width="327dp"
             android:layout_height="wrap_content"
-            android:drawableStart="@drawable/google1"
+            android:layout_margin="5dp"
+            android:drawableStart="@drawable/google_logo"
             android:drawablePadding="4dp"
-            android:text="Sign with Google"
             android:gravity="center"
+            android:text="Sign with Google"
             android:textSize="28sp" />
-
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="324dp"
+        android:text="Sign In/Sign Up"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

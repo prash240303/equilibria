@@ -32,12 +32,13 @@ class ChatActivity : AppCompatActivity() {
         setContentView(R.layout.activity_chat)
 
         val bundle : Bundle? = intent.extras
+        chat = bundle?.getString("chat").toString()
         val actionbar = supportActionBar
         //set back button
         actionbar?.setDisplayHomeAsUpEnabled(true)
         actionbar?.setDisplayHomeAsUpEnabled(true)
 
-        supportActionBar?.title = "Chat"
+        supportActionBar?.title = "$chat"
 
         mAuth = FirebaseAuth.getInstance()
         db= FirebaseFirestore.getInstance()
@@ -45,7 +46,7 @@ class ChatActivity : AppCompatActivity() {
         val currentUser = mAuth.currentUser
         var name = currentUser?.displayName
 
-        chat = bundle?.getString("chat").toString()
+
 
         chatRecyclerView = findViewById(R.id.chatRecyclerView)
         messageBox = findViewById(R.id.messageBox)
@@ -80,17 +81,16 @@ class ChatActivity : AppCompatActivity() {
                     .addOnFailureListener { e ->
                         Toast.makeText(this, "Chat Data Addition Error adding document", Toast.LENGTH_SHORT).show()
                     }
-                val intent = Intent(this,ChatActivity::class.java)
-                startActivity(intent)
-                finish()
+
+                messageAdapter.notifyDataSetChanged()
+                messageBox.text = null
+
+//                val intent = Intent(this,ChatActivity::class.java)
+//                startActivity(intent)
+//                finish()
             }
-
         }
-
-
     }
-
-
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
@@ -114,7 +114,6 @@ class ChatActivity : AppCompatActivity() {
                     }
                     messageAdapter.notifyDataSetChanged()
                 }
-
             })
     }
 }

@@ -12,6 +12,7 @@
     <string name="chat7">Chat Activity 7</string>
 
     <string-array name="branches">
+        <item>Select Your Branch</item>
         <item>Chemical Engineering</item>
         <item>Civil Engineering</item>
         <item>Computer Science</item>

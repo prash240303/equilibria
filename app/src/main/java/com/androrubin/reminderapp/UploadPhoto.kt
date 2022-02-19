@@ -30,6 +30,7 @@ class UploadPhoto : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_upload_photo)
 
+        supportActionBar?.hide()
         Toast.makeText(this,"Select an image to upload",Toast.LENGTH_LONG).show()
 
         mAuth = FirebaseAuth.getInstance()

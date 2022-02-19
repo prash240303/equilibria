@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="#ebf9ff"
     android:padding="15dp"
     tools:context=".UploadPhoto">
 
@@ -19,17 +19,22 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent">
 
-        <Button
+        <android.widget.Button
             android:id="@+id/selectImageBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="137dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
-            android:text="Select Image" />
-        <Button
+            android:background="@drawable/btn_background"
+            android:text="Select Image"
+            android:textColor="@color/white" />
+
+        <android.widget.Button
             android:id="@+id/uploadImageBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="146dp"
             android:layout_height="wrap_content"
-            android:text="Upload Image" />
+            android:background="@drawable/btn_background"
+            android:text="Upload Image"
+            android:textColor="@color/white" />
     </LinearLayout>
 
     <ImageView
