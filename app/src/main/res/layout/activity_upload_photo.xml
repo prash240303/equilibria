@@ -22,18 +22,20 @@
         <android.widget.Button
             android:id="@+id/selectImageBtn"
             android:layout_width="137dp"
-            android:layout_height="wrap_content"
+            android:layout_height="46dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/btn_background"
             android:text="Select Image"
+            android:fontFamily="@font/sf_pro_text_bold"
             android:textColor="@color/white" />
 
         <android.widget.Button
             android:id="@+id/uploadImageBtn"
             android:layout_width="146dp"
-            android:layout_height="wrap_content"
+            android:layout_height="46dp"
             android:background="@drawable/btn_background"
             android:text="Upload Image"
+            android:fontFamily="@font/sf_pro_text_bold"
             android:textColor="@color/white" />
     </LinearLayout>
 
