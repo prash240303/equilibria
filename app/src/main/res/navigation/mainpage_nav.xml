@@ -10,11 +10,11 @@
         android:name="com.androrubin.reminderapp.HomeFragment"
         android:label="Reminders"
         tools:layout="@layout/fragment_home" />
-    <fragment
+    <activity
         android:id="@+id/pomodoroFragment"
-        android:name="com.androrubin.reminderapp.PomodoroFragment"
+        android:name="com.androrubin.reminderapp.Pomodoro"
         android:label="Focus-Pomodoro"
-        tools:layout="@layout/fragment_pomodoro" />
+        tools:layout="@layout/activity_pomodoro" />
     <fragment
         android:id="@+id/communityFragment"
         android:name="com.androrubin.reminderapp.CommunityFragment"
