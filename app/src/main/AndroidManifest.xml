@@ -11,15 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ReminderApp">
+        <activity
+            android:name=".AboutApp"
+            android:exported="false" />
+
         <receiver
             android:name=".TimerExpiredReceiver"
             android:enabled="true"
-            android:exported="false"/>
-
+            android:exported="false" />
         <receiver
             android:name=".TimerNotificationActionReceiver"
             android:enabled="true"
-            android:exported="false" >
+            android:exported="false">
             <intent-filter>
                 <action android:name="stop" />
                 <action android:name="pause" />

@@ -72,7 +72,7 @@ class ChatActivity : AppCompatActivity() {
                     "time" to FieldValue.serverTimestamp()
                 )
 
-                db.collection("$chat")
+                db.collection("Communities").document("$chat").collection("chats")
                     .add(data)
                     .addOnSuccessListener {docref ->
                         Log.d("Chat Data Addition", "DocumentSnapshot written with ID: ${docref}.id")
@@ -97,7 +97,7 @@ class ChatActivity : AppCompatActivity() {
     }
     private fun EventChangeListener() {
         db= FirebaseFirestore.getInstance()
-        db.collection("$chat").orderBy("time", Query.Direction.ASCENDING)
+        db.collection("Communities").document("$chat").collection("chats").orderBy("time", Query.Direction.ASCENDING)
             .addSnapshotListener(object : EventListener<QuerySnapshot> {
                 override fun onEvent(value: QuerySnapshot?, error: FirebaseFirestoreException?) {
 

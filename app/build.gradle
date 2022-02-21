@@ -62,4 +62,6 @@ dependencies {
     implementation 'me.zhanghai.android.materialprogressbar:library:1.6.1'
 
     implementation 'androidx.preference:preference:1.2.0'
+
+//    implementation 'com.synnapps:carouselview:0.1.5'
 }

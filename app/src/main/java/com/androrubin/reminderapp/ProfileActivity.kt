@@ -20,6 +20,7 @@ class ProfileActivity : AppCompatActivity() {
     private var name :String ?= null
     private var uid :String ?= null
     private lateinit var deleteDialog :AlertDialog
+    private lateinit var logoutDialog :AlertDialog
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -88,13 +89,29 @@ class ProfileActivity : AppCompatActivity() {
         deleteDialog =  builder.create()
 
 
+        val view2 = layoutInflater.inflate(R.layout.logout_account_dialog,null)
+        val no2 = view2.findViewById<TextView>(R.id.no2)
+        val yes2 = view2.findViewById<TextView>(R.id.yes2)
+        yes2.setOnClickListener {
 
-        logoutBtn.setOnClickListener {
+            logoutDialog.dismiss()
+
             Toast.makeText(this,"User logged out ", Toast.LENGTH_SHORT).show()
             mAuth.signOut()
             val intent = Intent(this,LoginActivity::class.java)
             startActivity(intent)
             finishAffinity()
+
+        }
+        no2.setOnClickListener {
+            logoutDialog.dismiss()
+        }
+
+        builder.setView(view2)
+        logoutDialog =  builder.create()
+
+        logoutBtn.setOnClickListener {
+            logoutDialog.show()
         }
 
         editProfileBtn.setOnClickListener {

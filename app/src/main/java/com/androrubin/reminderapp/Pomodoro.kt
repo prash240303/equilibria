@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -62,10 +63,15 @@ class Pomodoro : AppCompatActivity() {
 
         binding = ActivityPomodoroBinding.inflate(layoutInflater)
         setContentView(binding.root)
+//        val actionbar = supportActionBar
+//        //set back button
+//        actionbar?.setDisplayHomeAsUpEnabled(true)
+//        actionbar?.setDisplayHomeAsUpEnabled(true)
         setSupportActionBar(binding.toolbar)
 
         supportActionBar?.setIcon(R.drawable.ic_baseline_timer_24)
-        supportActionBar?.title="        Pomodoro"
+        supportActionBar?.title="  Pomodoro"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
 
         fab_play.setOnClickListener {
@@ -230,12 +236,16 @@ class Pomodoro : AppCompatActivity() {
             R.id.action_settings -> {
                 // val intent = Intent(this, SettingsActivity::class.java)
                 //startActivity(intent)
+                Toast.makeText(this,"Clicked Settings",Toast.LENGTH_SHORT).show()
                 true
             }
             else -> super.onOptionsItemSelected(item)
         }
     }
-
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
+    }
 
 }
 

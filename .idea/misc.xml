@@ -8,6 +8,7 @@
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.2015" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/drawable/ic_google.xml" value="0.2015" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/drawable/ic_send.xml" value="0.2095" />
+        <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/activity_about_app.xml" value="0.176" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/activity_chat.xml" value="0.2" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/activity_create_profile.xml" value="0.3333333333333333" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/activity_edit_profile.xml" value="0.39748953974895396" />
@@ -16,17 +17,24 @@
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/activity_profile.xml" value="0.264" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.19791666666666666" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/activity_upload_photo.xml" value="0.2" />
+        <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/add_reminder_dialog.xml" value="0.4" />
+        <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/add_task_dialog.xml" value="0.4" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/community_list.xml" value="0.19791666666666666" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/delete_account_dialog.xml" value="0.536" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/fragment_community.xml" value="0.19791666666666666" />
-        <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/recieve.xml" value="0.19791666666666666" />
+        <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/fragment_home.xml" value="0.19791666666666666" />
+        <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/fragment_profile.xml" value="0.19791666666666666" />
+        <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/fragment_reminder.xml" value="0.18072916666666666" />
+        <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/fragment_to_do.xml" value="0.19791666666666666" />
+        <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/fragment_to_do2.xml" value="0.19791666666666666" />
+        <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/logout_account_dialog.xml" value="0.4" />
+        <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/recieve.xml" value="0.4" />
+        <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/reminder_list_item.xml" value="0.264" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/sent.xml" value="0.4" />
+        <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/todo_list_completed_item.xml" value="0.536" />
+        <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/todo_list_item.xml" value="0.19791666666666666" />
+        <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/todo_list_item1.xml" value="0.19791666666666666" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/menu/bottom_menu.xml" value="0.2" />
-        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp5/app/src/main/res/layout/activity_pomodoro.xml" value="0.1" />
-        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp5/app/src/main/res/layout/activity_profile.xml" value="0.21784420289855072" />
-        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp5/app/src/main/res/layout/content_pomodoro.xml" value="0.21784420289855072" />
-        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp5/app/src/main/res/layout/fragment_community.xml" value="0.1" />
-        <entry key="..\:/Users/HP/Documents/GitHub/ReminderApp5/app/src/main/res/menu/menu_main.xml" value="0.25" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.213" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/fragment_community.xml" value="0.21354166666666666" />
@@ -34,51 +42,6 @@
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/fragment_pomodoro.xml" value="0.21354166666666666" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/menu/bottom_menu.xml" value="0.25" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable-mdpi/ic_baseline_message_24.xml" value="0.2185" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable-mdpi/message_box_background.xml" value="0.2595" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2595" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable-xxhdpi/ic_address.xml" value="0.2185" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable-xxhdpi/ic_delete.xml" value="0.2185" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable-xxhdpi/ic_profile_edit.xml" value="0.2115" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable-xxxhdpi/btn_backgrnd2.xml" value="0.2595" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable-xxxhdpi/google_logo.xml" value="0.2185" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable-xxxhdpi/gradient_backgrnd.xml" value="0.2185" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable-xxxhdpi/ic_people.xml" value="0.2705" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable/btn_backgrnd3.xml" value="0.2395" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable/btn_background.xml" value="0.2595" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable/chat_input_box.xml" value="0.239" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.2185" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.2185" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable/ic_baseline_people_outline_24.xml" value="0.2185" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.2185" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable/ic_baseline_timelapse_24.xml" value="0.2185" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable/ic_branch.xml" value="0.2185" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2185" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable/ic_loginpage_illust_calend.xml" value="0.2675" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable/ic_loginpage_illust_watchglass.xml" value="0.241" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable/ic_loginpg_illust_clock.xml" value="0.241" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable/ic_loginpg_illust_comm_.xml" value="0.2595" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable/ic_loginpg_illust_workdone.xml" value="0.2675" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable/ic_phone.xml" value="0.2185" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable/ic_recive_message_box.xml" value="0.2595" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable/ic_reminders.xml" value="0.2705" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable/ic_send.xml" value="0.2595" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable/ic_send_button.xml" value="0.2705" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/drawable/ic_send_button_box.xml" value="0.2595" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/layout/activity_chat.xml" value="0.2" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/layout/activity_create_profile.xml" value="0.4" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/layout/activity_edit_profile.xml" value="0.264" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/layout/activity_login.xml" value="0.264" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/layout/activity_profile.xml" value="0.42769500438212094" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/layout/activity_splash_screen.xml" value="0.264" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/layout/activity_upload_photo.xml" value="0.264" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/layout/community_list.xml" value="0.536" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/layout/delete_account_dialog.xml" value="0.6" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/layout/fragment_community.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/layout/recieve.xml" value="0.72" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/layout/sent.xml" value="0.72" />
-        <entry key="..\:/Users/prash/AndroidStudioProjects/ReminderApp18feb/app/src/main/res/menu/bottom_menu.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/drawable-mdpi/btn_background.xml" value="0.1575" />
         <entry key="app/src/main/res/drawable-mdpi/ic_baseline_message_24.xml" value="0.155" />
         <entry key="app/src/main/res/drawable-xxhdpi/btn_background.xml" value="0.1575" />

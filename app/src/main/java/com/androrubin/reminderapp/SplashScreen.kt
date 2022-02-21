@@ -45,7 +45,7 @@ class SplashScreen : AppCompatActivity() {
                         }
                         else {
 
-                            val dashboardIntent = Intent(this,LoginActivity::class.java)
+                            val dashboardIntent = Intent(this,AboutApp::class.java)
                             startActivity(dashboardIntent)
                             finish()
                         }
@@ -54,7 +54,7 @@ class SplashScreen : AppCompatActivity() {
         }else {
 
             Handler().postDelayed({
-                val signInintent = Intent(this, LoginActivity::class.java)
+                val signInintent = Intent(this, AboutApp::class.java)
                 startActivity(signInintent)
                 finish()
             }, 3500)
