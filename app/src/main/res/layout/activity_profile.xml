@@ -19,6 +19,8 @@
             android:id="@+id/detailsCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
             app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -34,6 +36,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Phone"
+
+                    android:fontFamily="@font/sf_pro_text_light"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/txtEmail" />
 
@@ -43,9 +47,10 @@
                 android:layout_height="wrap_content"
 
                 android:drawablePadding="4dp"
-                android:drawableTint="@color/purple_500"
+                app:drawableStartCompat="@drawable/ic_phone"
+                android:fontFamily="@font/sf_pro_text_regular"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/textView9"
                 app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -55,6 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Branch"
+                android:fontFamily="@font/sf_pro_text_light"
                 app:layout_constraintStart_toStartOf="@+id/txtPhone"
                 app:layout_constraintTop_toBottomOf="@+id/txtPhone" />
 
@@ -63,7 +69,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                app:drawableStartCompat="@drawable/ic_branch"
+                android:fontFamily="@font/sf_pro_text_regular"
+                android:textSize="16sp"
+                android:drawablePadding="4dp"
                 app:layout_constraintStart_toStartOf="@+id/textView10"
                 app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -72,6 +81,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Email"
+                    android:fontFamily="@font/sf_pro_text_light"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
                 <TextView
@@ -80,7 +90,9 @@
                     android:layout_height="wrap_content"
                     android:drawablePadding="4dp"
                     android:textColor="@color/black"
-                    android:textSize="18sp"
+                    android:fontFamily="@font/sf_pro_text_regular"
+                    app:drawableStartCompat="@drawable/ic_baseline_email_24"
+                    android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="@+id/textView5"
                     app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -90,6 +102,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="Batch Year"
+                    android:fontFamily="@font/sf_pro_text_light"
                 app:layout_constraintStart_toStartOf="@+id/txtBranch"
                 app:layout_constraintTop_toBottomOf="@+id/txtBranch" />
 
@@ -98,7 +111,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
-                android:textSize="18sp"
+                android:fontFamily="@font/sf_pro_text_regular"
+                app:drawableStartCompat="@drawable/ic_people"
+                android:drawablePadding="4dp"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="@+id/textView11"
                 app:layout_constraintTop_toBottomOf="@+id/textView11" />
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -188,8 +204,9 @@
             android:drawableStart="@drawable/ic_profile_edit"
             android:drawableTint="@color/black"
             android:text="Edit Profile"
+            android:fontFamily="@font/sf_pro_text_bold"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -201,7 +218,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:textColor="@color/black"
-            android:textSize="30sp"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -227,7 +244,7 @@
                 android:layout_marginBottom="5dp"
                 android:layout_weight="1"
                 android:contextClickable="true"
-                app:cardCornerRadius="12dp">
+                app:cardCornerRadius="20dp">
 
                 <TextView
                     android:id="@+id/deleteAccount"
@@ -235,7 +252,9 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_delete"
                     android:padding="10dp"
+                    android:background="@drawable/btn_backgrnd3"
                     android:text="Delete Account"
+                    android:fontFamily="@font/sf_pro_dispaly_semibold"
                     android:textColor="@color/red"
                     android:textSize="16sp" />
             </androidx.cardview.widget.CardView>
@@ -246,7 +265,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:contextClickable="true"
-                app:cardCornerRadius="12dp">
+                app:cardCornerRadius="20dp">
 
                 <TextView
                     android:id="@+id/logoutBtn"
@@ -254,10 +273,12 @@
                     android:layout_height="wrap_content"
                     android:drawableStart="@drawable/ic_logout"
                     android:drawablePadding="4dp"
-                    android:drawableTint="#0C28C7"
+                    android:fontFamily="@font/sf_pro_dispaly_semibold"
+                    android:drawableTint="@color/white"
                     android:padding="10dp"
                     android:text="Logout"
-                    android:textColor="#0C28C7"
+                    android:background="@drawable/btn_background"
+                    android:textColor="@color/white"
                     android:textSize="16sp" />
             </androidx.cardview.widget.CardView>
         </LinearLayout>

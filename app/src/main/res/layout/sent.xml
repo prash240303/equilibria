@@ -9,9 +9,9 @@
     android:layout_marginBottom="3dp">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn_background"
+        android:layout_width="182dp"
+        android:layout_height="62dp"
+        android:background="@drawable/ic_send_button_box"
         android:orientation="vertical"
         android:padding="9dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,11 +24,12 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
             android:autoLink="web"
+            android:fontFamily="@font/sf_pro_text_regular"
             android:gravity="left"
             android:text="This message is sent"
             android:textColor="@color/white"
             android:textIsSelectable="true"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             tools:ignore="TouchTargetSizeCheck" />
 
@@ -36,9 +37,10 @@
             android:id="@+id/time2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_text_light"
             android:gravity="end"
             android:text="Time"
             android:textColor="@color/white"
-            android:textSize="12sp"/>
+            android:textSize="9sp" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

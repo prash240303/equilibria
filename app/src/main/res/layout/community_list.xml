@@ -4,31 +4,37 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="5dp"
+    app:cardCornerRadius="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
-
     <com.google.android.material.imageview.ShapeableImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/com_prof_pic"
-        android:scaleType="centerCrop"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
         android:adjustViewBounds="true"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:scaleType="centerCrop"
+
         android:src="@drawable/f"
         app:layout_constraintStart_toStartOf="parent"
-        app:shapeAppearanceOverlay="@style/RoundCorner"/>
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/RoundCorner" />
 
     <TextView
         android:id="@+id/com_name"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="79dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="15dp"
         android:layout_weight="1"
+android:gravity="center_vertical"
         android:text="Community"
-        android:textSize="25dp"
+        android:textSize="20dp"
+        android:fontFamily="@font/sf_pro_display_regular"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.157"
