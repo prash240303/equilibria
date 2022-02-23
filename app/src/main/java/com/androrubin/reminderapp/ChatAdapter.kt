@@ -44,7 +44,6 @@ class ChatAdapter(private val messageList:ArrayList<Message>) : RecyclerView.Ada
             viewHolder.recieveMessage.text = currentMessage.message
             viewHolder.sender2.text = currentMessage.sendername
             viewHolder.time2.text = currentMessage.time?.toDate().toString()
-
         }
 
     }
