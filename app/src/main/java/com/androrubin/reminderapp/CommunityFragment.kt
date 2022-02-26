@@ -46,7 +46,7 @@ class CommunityFragment : Fragment() {
         heading = arrayOf(
             "Astro",
             "Photography",
-            "Vacation",
+            "Music",
             "Book Hub",
             "Phoenix",
             "Coding",
