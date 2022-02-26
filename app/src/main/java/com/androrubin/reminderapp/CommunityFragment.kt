@@ -44,17 +44,17 @@ class CommunityFragment : Fragment() {
         )
 
         heading = arrayOf(
-            "Community 1",
-            "Community 2",
-            "Community 3",
-            "Community 4",
-            "Community 5",
-            "Community 6",
-            "Community 7",
-            "Community 8",
-            "Community 9",
-            "Community 10",
-            "Community 11"
+            "Astro",
+            "Photography",
+            "Vacation",
+            "Book Hub",
+            "Phoenix",
+            "Coding",
+            "Shades",
+            "Wall Street Club",
+            "Report Writing",
+            "Tech Enthusiasts",
+            "Anime"
         )
 
         chat = arrayOf(
