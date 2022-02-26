@@ -45,8 +45,10 @@ class Announcements:AppCompatActivity() {
     private lateinit var announcementList: ArrayList<AnnouncementDC>
     private lateinit var db: FirebaseFirestore
     private lateinit var announcementAdapter: AnnouncementAdapter
+    private lateinit var reminderAdapter: ReminderAdapter
     private var uid: String? = null
     private lateinit var addAnnouncementDialog: AlertDialog
+    private lateinit var reminderList: ArrayList<RemindersDC>
     private lateinit var chats: String
 
 
@@ -59,6 +61,8 @@ class Announcements:AppCompatActivity() {
         val bundle: Bundle? = intent.extras
         chats = bundle?.getString("chat").toString()
         announcementList = ArrayList()
+        reminderList = ArrayList()
+        reminderAdapter = ReminderAdapter(reminderList)
         announcementRecyclerView=findViewById(R.id.announceRecycler)
         announcementAdapter = AnnouncementAdapter(announcementList)
 
@@ -164,6 +168,29 @@ class Announcements:AppCompatActivity() {
                             "Chat Data Addition Error adding document",
                             Toast.LENGTH_SHORT).show()
                     }
+                val dat = hashMapOf(
+
+                    "reminder" to title.text.trim().toString(),
+                    "date" to date.text.trim().toString(),
+                    "time" to time.text.trim().toString()
+
+                )
+
+                db.collection("Tasks").document("$uid").collection("Reminders").document("${title.text.trim()}")
+                    .set(dat)
+                    .addOnSuccessListener { docref ->
+                        Log.d(
+                            "Chat Data Addition",
+                            "DocumentSnapshot written with ID: ${docref}.id"
+                        )
+                    }
+                    .addOnFailureListener { e ->
+                        Toast.makeText(
+                            this,
+                            "Chat Data Addition Error adding document",
+                            Toast.LENGTH_SHORT).show()
+                    }
+                reminderAdapter.notifyDataSetChanged()
                 announcementAdapter.notifyDataSetChanged()
 
                 val main=title.text.toString()
@@ -201,9 +228,11 @@ class Announcements:AppCompatActivity() {
                     for (dc: DocumentChange in value?.documentChanges!!) {
                         if (dc.type == DocumentChange.Type.ADDED) {
                             announcementList.add(dc.document.toObject(AnnouncementDC::class.java))
+                            reminderList.add(dc.document.toObject(RemindersDC::class.java))
                         }
                     }
                     announcementAdapter.notifyDataSetChanged()
+                    reminderAdapter.notifyDataSetChanged()
                 }
             })
     }
