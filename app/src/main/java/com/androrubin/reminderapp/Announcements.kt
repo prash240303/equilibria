@@ -14,15 +14,13 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.androrubin.reminderapp.NotificationData.NotificationData
 import com.androrubin.reminderapp.NotificationData.PushNotification
 import com.androrubin.reminderapp.NotificationData.RetrofitInstance
-import com.androrubin.reminderapp.adapters.AnnouncementAdapter
-import com.androrubin.reminderapp.adapters.AnnouncementDC
-import com.androrubin.reminderapp.adapters.ReminderAdapter
-import com.androrubin.reminderapp.adapters.RemindersDC
+import com.androrubin.reminderapp.adapters.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.*
@@ -92,6 +90,30 @@ class Announcements:AppCompatActivity() {
         val date = view2.findViewById<TextView>(R.id.txtAnnounceDate)
         val time = view2.findViewById<TextView>(R.id.txtAnnounceTime)
 
+        val swipeGesture = object : SwipeGesture(this) {
+            override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
+
+                when (direction) {
+
+                    ItemTouchHelper.LEFT -> {
+                        val archiveditem = announcementList[viewHolder.adapterPosition]
+                        announcementList.removeAt(viewHolder.adapterPosition)
+                        announcementAdapter.addItem(viewHolder.adapterPosition, archiveditem)
+                    }
+                    ItemTouchHelper.RIGHT -> {
+
+                        val archiveditem = announcementList[viewHolder.adapterPosition]
+                        announcementList.removeAt(viewHolder.adapterPosition)
+
+                        Toast.makeText(this@Announcements, "Reminder added", Toast.LENGTH_SHORT).show()
+                        announcementAdapter.addItem(viewHolder.adapterPosition, archiveditem)
+
+                    }
+                }
+            }
+        }
+        val touchHelper = ItemTouchHelper(swipeGesture)
+        touchHelper.attachToRecyclerView(announcementRecyclerView)
 
         time.setOnClickListener {
             val cal = Calendar.getInstance()
@@ -121,6 +143,7 @@ class Announcements:AppCompatActivity() {
         save.setOnClickListener {
             mAuth = FirebaseAuth.getInstance()
             db = FirebaseFirestore.getInstance()
+
 
             if (TextUtils.isEmpty(title!!.getText()?.trim().toString())) {
 
@@ -168,30 +191,8 @@ class Announcements:AppCompatActivity() {
                             "Chat Data Addition Error adding document",
                             Toast.LENGTH_SHORT).show()
                     }
-                val dat = hashMapOf(
 
-                    "reminder" to title.text.trim().toString(),
-                    "date" to date.text.trim().toString(),
-                    "time" to time.text.trim().toString()
 
-                )
-
-                db.collection("Tasks").document("$uid").collection("Reminders").document("${title.text.trim()}")
-                    .set(dat)
-                    .addOnSuccessListener { docref ->
-                        Log.d(
-                            "Chat Data Addition",
-                            "DocumentSnapshot written with ID: ${docref}.id"
-                        )
-                    }
-                    .addOnFailureListener { e ->
-                        Toast.makeText(
-                            this,
-                            "Chat Data Addition Error adding document",
-                            Toast.LENGTH_SHORT).show()
-                    }
-                reminderAdapter.notifyDataSetChanged()
-                announcementAdapter.notifyDataSetChanged()
 
                 val main=title.text.toString()
                 val message=desc.text.toString()

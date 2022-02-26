@@ -11,7 +11,9 @@ import androidx.appcompat.app.AlertDialog
 import com.bumptech.glide.Glide
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 
 class ProfileActivity : AppCompatActivity() {
 
@@ -74,6 +76,17 @@ class ProfileActivity : AppCompatActivity() {
         yes.setOnClickListener {
 
             deleteDialog.dismiss()
+            val user2 = Firebase.auth.currentUser!!
+
+            user2.delete()
+                .addOnCompleteListener { task ->
+                    if (task.isSuccessful) {
+                        Log.d("Deleting user", "User account deleted.")
+                    }
+                    else{
+                        Log.d("Deleting user", "User account not deleted.")
+                    }
+                }
             db.collection("Users").document("$uid")
                 .delete()
                 .addOnSuccessListener { Log.d("Deleting Account", "DocumentSnapshot successfully deleted!") }

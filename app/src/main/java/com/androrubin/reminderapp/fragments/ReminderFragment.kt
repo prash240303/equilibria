@@ -39,16 +39,23 @@ class ReminderFragment : Fragment() {
     private var uid: String? = null
     private lateinit var addtaskDialog: AlertDialog
 
-    override fun onStop() {
-//        reminderList = ArrayList()
-        EventChangeListener()
-        super.onStop()
+    private lateinit var task : EditText
+    private lateinit var date : TextView
+    private lateinit var time : TextView
+
+
+    override fun onResume() {
+        super.onResume()
+        setvalue()
     }
 
-    override fun onStart() {
-        super.onStart()
-//       reminderList = ArrayList()
-       EventChangeListener()
+    private fun setvalue() {
+        reminderList = ArrayList()
+        reminderList.clear()
+        reminderAdapter = ReminderAdapter(reminderList)
+        newRecyclerView.layoutManager = LinearLayoutManager(context)
+        newRecyclerView.adapter = reminderAdapter
+        EventChangeListener()
     }
 
     override fun onCreateView(
@@ -72,18 +79,18 @@ class ReminderFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        reminderList = ArrayList()
-        reminderAdapter = ReminderAdapter(reminderList)
-        newRecyclerView.layoutManager = LinearLayoutManager(context)
-        newRecyclerView.adapter = reminderAdapter
-
-        val swipeGesture = object : SwipeGesture() {
+        val swipeGesture = object : SwipeGesture(requireContext()) {
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
 
                 when (direction) {
 
                     ItemTouchHelper.LEFT -> {
                         val archiveditem = reminderList[viewHolder.adapterPosition]
+                        Toast.makeText(
+                            context,
+                            "Reminder deleted",
+                            Toast.LENGTH_SHORT
+                        ).show()
                         reminderAdapter.deleteitem(viewHolder.adapterPosition, archiveditem)
                     }
                     ItemTouchHelper.RIGHT -> {
@@ -107,9 +114,9 @@ class ReminderFragment : Fragment() {
         uid = user?.uid
 
         val save = view2.findViewById<Button>(R.id.saveReminderBtn)
-        val task = view2.findViewById<EditText>(R.id.edtNewReminder)
-        val date = view2.findViewById<TextView>(R.id.txtAlarmDate)
-        val time = view2.findViewById<TextView>(R.id.txtAlarmTime)
+        task = view2.findViewById<EditText>(R.id.edtNewReminder)
+        date = view2.findViewById<TextView>(R.id.txtAlarmDate)
+        time = view2.findViewById<TextView>(R.id.txtAlarmTime)
 
         time.setOnClickListener {
             val cal = Calendar.getInstance()
@@ -192,6 +199,7 @@ class ReminderFragment : Fragment() {
     private fun EventChangeListener() {
 
 //        reminderList = ArrayList()
+
         db = FirebaseFirestore.getInstance()
         db.collection("Tasks").document("$uid").collection("Reminders").orderBy("reminder",Query.Direction.ASCENDING)
             .addSnapshotListener(object : EventListener<QuerySnapshot> {

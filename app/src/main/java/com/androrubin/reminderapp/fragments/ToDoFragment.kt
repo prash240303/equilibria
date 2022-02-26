@@ -30,18 +30,52 @@ class ToDoFragment : Fragment() {
     private lateinit var db: FirebaseFirestore
     private lateinit var todoAdapter: TodoAdapter
     private var uid: String? = null
+    private lateinit var task : EditText
     private lateinit var addtaskDialog: AlertDialog
 
-    override fun onStop() {
-        EventChangeListener()
-        super.onStop()
+
+    override fun onResume() {
+        super.onResume()
+        setValue()
     }
 
-    override fun onStart() {
-        super.onStart()
+    fun setValue() {
+        todoArrayList = ArrayList()
+        todoArrayList.clear()
+        todoAdapter = TodoAdapter(todoArrayList)
+        newRecyclerView.layoutManager = LinearLayoutManager(context)
+        newRecyclerView.adapter = todoAdapter
         EventChangeListener()
-    }
 
+    }
+    fun addData()
+    {
+        val data = hashMapOf(
+
+            "TodoTask" to task.text.toString(),
+            "status" to "0"
+        )
+        db = FirebaseFirestore.getInstance()
+        db.collection("Tasks").document("$uid").collection("Todo List")
+            .document("${task.text}")
+            .set(data)
+            .addOnSuccessListener { docref ->
+
+                Log.d(
+                    "Chat Data Addition",
+                    "DocumentSnapshot written with ID: ${docref}.id"
+                )
+            }
+            .addOnFailureListener { e ->
+                Toast.makeText(
+                    context,
+                    "Chat Data Addition Error adding document",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }
+//        setValue()
+
+    }
 
 
     override fun onCreateView(
@@ -50,7 +84,8 @@ class ToDoFragment : Fragment() {
     ): View? {
 
         val view = inflater.inflate(R.layout.fragment_to_do, container, false)
-        db = FirebaseFirestore.getInstance()
+
+//        Toast.makeText(context, "Running on CreateView", Toast.LENGTH_SHORT).show()
         val addTaskBtn = view.findViewById<FloatingActionButton>(R.id.addTaskBtn)
 
         addTaskBtn.setOnClickListener {
@@ -63,26 +98,30 @@ class ToDoFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-        todoArrayList = ArrayList()
-        todoAdapter = TodoAdapter(todoArrayList)
-        newRecyclerView.layoutManager = LinearLayoutManager(context)
-        newRecyclerView.adapter = todoAdapter
-        val swipeGesture = object : SwipeGesture() {
+        val swipeGesture = object : SwipeGesture(requireContext()) {
             override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
 
                 when (direction) {
 
                     ItemTouchHelper.LEFT -> {
                         val archiveditem = todoArrayList[viewHolder.adapterPosition]
+                        Toast.makeText(
+                            context,
+                            "Task deleted",
+                            Toast.LENGTH_SHORT
+                        ).show()
                         todoAdapter.deleteitem(viewHolder.adapterPosition, archiveditem)
                     }
                     ItemTouchHelper.RIGHT -> {
-
                         val archiveditem = todoArrayList[viewHolder.adapterPosition]
                         todoArrayList.removeAt(viewHolder.adapterPosition)
                         todoAdapter.addItem(todoArrayList.size, archiveditem)
-
+                        Toast.makeText(
+                            context,
+                            "Task completed",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        setValue()
                     }
                 }
             }
@@ -98,7 +137,7 @@ class ToDoFragment : Fragment() {
         uid = user?.uid
 
         val save = view2.findViewById<Button>(R.id.saveTaskBtn)
-        val task = view2.findViewById<EditText>(R.id.edtNewTask)
+        task = view2.findViewById<EditText>(R.id.edtNewTask)
         save.setOnClickListener {
 
             if (TextUtils.isEmpty(task!!.getText()?.trim().toString())) {
@@ -107,32 +146,7 @@ class ToDoFragment : Fragment() {
                 task.requestFocus()
             } else {
                 addtaskDialog.dismiss()
-
-                val data = hashMapOf(
-
-                    "TodoTask" to task.text.toString(),
-                    "status" to "0"
-                )
-
-                db.collection("Tasks").document("$uid").collection("Todo List")
-                    .document("${task.text}")
-                    .set(data)
-                    .addOnSuccessListener { docref ->
-
-                        Log.d(
-                            "Chat Data Addition",
-                            "DocumentSnapshot written with ID: ${docref}.id"
-                        )
-                    }
-                    .addOnFailureListener { e ->
-                        Toast.makeText(
-                            context,
-                            "Chat Data Addition Error adding document",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
-
-                todoAdapter.notifyDataSetChanged()
+                addData()
                 task.text = null
             }
         }
@@ -140,7 +154,8 @@ class ToDoFragment : Fragment() {
 
     private fun EventChangeListener() {
         db = FirebaseFirestore.getInstance()
-        db.collection("Tasks").document("$uid").collection("Todo List").orderBy("status",Query.Direction.ASCENDING)
+        db.collection("Tasks").document("$uid").collection("Todo List")
+            .orderBy("status", Query.Direction.ASCENDING)
             .addSnapshotListener(object : EventListener<QuerySnapshot> {
                 override fun onEvent(value: QuerySnapshot?, error: FirebaseFirestoreException?) {
 

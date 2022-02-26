@@ -48,7 +48,7 @@ class SplashScreen : AppCompatActivity() {
                         }
                         else {
 
-                            val dashboardIntent = Intent(this,AboutApp::class.java)
+                            val dashboardIntent = Intent(this,CreateProfile::class.java)
                             startActivity(dashboardIntent)
                             finish()
                         }
