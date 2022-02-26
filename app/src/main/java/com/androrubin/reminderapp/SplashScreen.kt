@@ -1,5 +1,7 @@
 package com.androrubin.reminderapp
 
+import android.app.PendingIntent.getActivity
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -35,6 +37,7 @@ class SplashScreen : AppCompatActivity() {
                         //Returns value of corresponding field
                         val b = it["ProfileCreated"].toString()
 
+
                         if (b=="1") {
 
 
@@ -54,11 +57,24 @@ class SplashScreen : AppCompatActivity() {
         }else {
 
             Handler().postDelayed({
-                val signInintent = Intent(this, AboutApp::class.java)
-                startActivity(signInintent)
-                finish()
+                if(onBoardingFinished()){
+                    val loginInintent = Intent(this, LoginActivity::class.java)
+                    startActivity(loginInintent)
+                    finish()
+                }
+                else {
+                    val signInintent = Intent(this, AboutApp::class.java)
+                    startActivity(signInintent)
+                    finish()
+                }
             }, 3500)
 
         }
+    }
+
+    private fun onBoardingFinished(): Boolean {
+        val sharedPref = applicationContext.getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
+        return sharedPref.getBoolean("Finished",false)
+
     }
 }
