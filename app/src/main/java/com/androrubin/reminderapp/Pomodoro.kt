@@ -1,9 +1,13 @@
 package com.androrubin.reminderapp
 
 import android.app.AlarmManager
+import android.app.NotificationChannel
+import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
+import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.Menu
@@ -11,6 +15,8 @@ import android.view.MenuItem
 import android.widget.Toast
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.NotificationCompat
+import androidx.core.app.NotificationManagerCompat
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
@@ -23,6 +29,10 @@ import kotlinx.android.synthetic.main.content_pomodoro.*
 import java.util.*
 
 class Pomodoro : AppCompatActivity() {
+
+    val CHANNEL_ID="channelID1"
+    val CHANNEL_NAME= "channelName1"
+    val NOTIFICATION_ID=0
 
     companion object {
         fun setAlarm(context: Context, nowSeconds: Long, secondsRemaining: Long): Long{
@@ -63,6 +73,7 @@ class Pomodoro : AppCompatActivity() {
 
         binding = ActivityPomodoroBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        createNotificationChannel()
 //        val actionbar = supportActionBar
 //        //set back button
 //        actionbar?.setDisplayHomeAsUpEnabled(true)
@@ -72,36 +83,46 @@ class Pomodoro : AppCompatActivity() {
         supportActionBar?.setIcon(R.drawable.ic_baseline_timer_24)
         supportActionBar?.title="  Pomodoro"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
+        val notificationManager=NotificationManagerCompat.from(this)
 
         fab_play.setOnClickListener {
+
+            val notification=NotificationCompat.Builder(this,CHANNEL_ID)
+                .setContentTitle("FOCUS ON WORK")
+                .setContentText("Started a session for ___ min")
+                .setSmallIcon(R.drawable.ic_baseline_play_arrow_24)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .build()
+
+            val notificationManager=NotificationManagerCompat.from(this)
             startTimer()
             timerState = TimerState.Running
             updateButtons()
+            notificationManager.notify(NOTIFICATION_ID,notification)
+
         }
 
         fab_pause.setOnClickListener {
             timer.cancel()
             timerState = TimerState.Paused
             updateButtons()
+            notificationManager.deleteNotificationChannel(CHANNEL_ID)
         }
 
         fab_stop.setOnClickListener {
             if(timerState==TimerState.Running){
-                timer.cancel()
-            }
+                timer.cancel() }
+            createNotificationChannel()
             onTimerFinished()
             timerState=TimerState.Stopped
+
         }
 
 
     }
     override fun onResume(){
         super.onResume()
-
         initTimer()
-
-
         removeAlarm(this)
         NotificationUtil.hideTimerNotification(this)
     }
@@ -151,6 +172,15 @@ class Pomodoro : AppCompatActivity() {
 
 
     private fun onTimerFinished(){
+        val notification=NotificationCompat.Builder(this,CHANNEL_ID)
+            .setContentTitle("SESSION ENDED")
+            .setContentText("Well Done !!\nYou deserve a break")
+            .setSmallIcon(R.drawable.ic_baseline_stop_24)
+            .setPriority(NotificationCompat.PRIORITY_HIGH)
+            .build()
+
+        val notificationManager=NotificationManagerCompat.from(this)
+        notificationManager.notify(NOTIFICATION_ID,notification)
         timerState = TimerState.Stopped
 
         setNewTimerLength()
@@ -245,6 +275,16 @@ class Pomodoro : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
+    }
+
+    fun createNotificationChannel(){
+        val channel=NotificationChannel(CHANNEL_ID,CHANNEL_NAME,NotificationManager.IMPORTANCE_HIGH).apply {
+            lightColor= Color.RED
+            enableLights(true)
+        }
+        val manager=getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        manager.createNotificationChannel(channel)
+
     }
 
 }
