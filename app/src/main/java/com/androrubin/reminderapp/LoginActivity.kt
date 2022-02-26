@@ -42,6 +42,13 @@ class LoginActivity : AppCompatActivity() {
             signIn()
         }
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        finishAffinity()
+    }
+
+
     private fun signIn() {
         val signInIntent = googleSignInClient.signInIntent
         googleSignInClient.signOut();
