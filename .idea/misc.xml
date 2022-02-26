@@ -36,11 +36,19 @@
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/todo_list_item1.xml" value="0.19791666666666666" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/menu/bottom_menu.xml" value="0.2" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.213" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/activity_announcements.xml" value="0.22" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/add_reminder_dialog.xml" value="0.5" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/announcement_dialog.xml" value="0.21145833333333333" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/announcement_list_item.xml" value="0.33" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/community_list.xml" value="0.21145833333333333" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/fragment_community.xml" value="0.21354166666666666" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/fragment_home.xml" value="0.2" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/fragment_pomodoro.xml" value="0.21354166666666666" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/fragment_reminder.xml" value="0.22" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/layout/reminder_list_item.xml" value="0.5" />
+        <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/menu/announcement_menu.xml" value="0.21145833333333333" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/menu/bottom_menu.xml" value="0.25" />
         <entry key="app/src/main/res/drawable-mdpi/btn_background.xml" value="0.1575" />
         <entry key="app/src/main/res/drawable-mdpi/ic_baseline_message_24.xml" value="0.155" />

@@ -4,7 +4,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.androrubin.reminderapp.R
@@ -34,7 +33,6 @@ class ReminderAdapter (private val reminderList: ArrayList<RemindersDC>):Recycle
     }
 
     fun addItem(i : Int, tasks : RemindersDC ){
-
         reminderList.add(i,tasks)
         notifyDataSetChanged()
     }
