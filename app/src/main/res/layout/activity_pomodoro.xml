@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#f5fafc"
     tools:context=".Pomodoro">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -30,6 +31,7 @@
         android:id="@+id/fab_stop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#4392d2"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_bigger_margin"
         android:backgroundTint="#03A9F4"

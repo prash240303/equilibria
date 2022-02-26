@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/notifybtn"
-        android:title="Notify"
-        android:icon="@drawable/ic_bell"/>
+        android:title="Announce"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_announcement"/>
 </menu>

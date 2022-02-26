@@ -14,7 +14,8 @@ import com.google.firebase.firestore.FirebaseFirestore
 import java.security.AccessController.getContext
 import kotlin.system.measureNanoTime
 
-class AnnouncementAdapter (private val AnnouncementList: ArrayList<AnnouncementDC>): RecyclerView.Adapter<AnnouncementAdapter.ViewHolder>(){
+class AnnouncementAdapter(private val AnnouncementList: ArrayList<AnnouncementDC>) :
+    RecyclerView.Adapter<AnnouncementAdapter.ViewHolder>() {
 
     private lateinit var db: FirebaseFirestore
     var mAuth = FirebaseAuth.getInstance()
@@ -22,8 +23,8 @@ class AnnouncementAdapter (private val AnnouncementList: ArrayList<AnnouncementD
     val name = user?.displayName
     val uid = user?.uid
 
-    fun addItem(i : Int, announcements: AnnouncementDC){
-        AnnouncementList.add(i,announcements)
+    fun addItem(i: Int, announcements: AnnouncementDC) {
+        AnnouncementList.add(i, announcements)
         db = FirebaseFirestore.getInstance()
         val dat = hashMapOf(
 
@@ -32,29 +33,30 @@ class AnnouncementAdapter (private val AnnouncementList: ArrayList<AnnouncementD
             "time" to announcements.time
 
         )
-                        db.collection("Tasks").document("$uid").collection("Reminders").document("${announcements.title}")
-                            .set(dat)
-                            .addOnSuccessListener { docref ->
-                                Log.d(
-                                    "Chat Data Addition",
-                                    "DocumentSnapshot written with ID: ${docref}.id"
-                                )
-                            }
-                            .addOnFailureListener { e ->
-                                Log.d(
-                                    "Chat Data Addition",
-                                    "Data cannot be added"
-                                )
-                            }
+        db.collection("Tasks").document("$uid").collection("Reminders")
+            .document("${announcements.title}")
+            .set(dat)
+            .addOnSuccessListener { docref ->
+                Log.d(
+                    "Chat Data Addition",
+                    "DocumentSnapshot written with ID: ${docref}.id"
+                )
+            }
+            .addOnFailureListener { e ->
+                Log.d(
+                    "Chat Data Addition",
+                    "Data cannot be added"
+                )
+            }
         notifyDataSetChanged()
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         val title = itemView.findViewById<TextView>(R.id.AnnouncementTitle)
         val date = itemView.findViewById<TextView>(R.id.announcementDate)
         val time = itemView.findViewById<TextView>(R.id.announcementTime)
-        val desc=itemView.findViewById<TextView>(R.id.announcementDesc)
+        val desc = itemView.findViewById<TextView>(R.id.announcementDesc)
 
     }
 
@@ -63,14 +65,15 @@ class AnnouncementAdapter (private val AnnouncementList: ArrayList<AnnouncementD
         holder.title.text = currentitem.title
         holder.date.text = currentitem.date
         holder.time.text = currentitem.time
-        holder.desc.text=currentitem.description
+        holder.desc.text = currentitem.description
     }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
     ): AnnouncementAdapter.ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.announcement_list_item, parent,false)
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.announcement_list_item, parent, false)
         return ViewHolder(view)
     }
 

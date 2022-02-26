@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProfileActivity"
-    android:background="#f2fbff"
+    android:background="#f5fafc"
 
     tools:ignore="SpeakableTextPresentCheck">
 
@@ -41,40 +41,40 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/txtEmail" />
 
-            <TextView
-                android:id="@+id/txtPhone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                <TextView
+                    android:id="@+id/txtPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
 
-                android:drawablePadding="4dp"
-                app:drawableStartCompat="@drawable/ic_phone"
-                android:fontFamily="@font/sf_pro_text_regular"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="@+id/textView9"
-                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+                    android:drawablePadding="4dp"
+                    app:drawableStartCompat="@drawable/ic_phone"
+                    android:fontFamily="@font/sf_pro_text_regular"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView9"
+                    app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Branch"
-                android:fontFamily="@font/sf_pro_text_light"
-                app:layout_constraintStart_toStartOf="@+id/txtPhone"
-                app:layout_constraintTop_toBottomOf="@+id/txtPhone" />
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Branch"
+                    android:fontFamily="@font/sf_pro_text_light"
+                    app:layout_constraintStart_toStartOf="@+id/txtPhone"
+                    app:layout_constraintTop_toBottomOf="@+id/txtPhone" />
 
-            <TextView
-                android:id="@+id/txtBranch"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                app:drawableStartCompat="@drawable/ic_branch"
-                android:fontFamily="@font/sf_pro_text_regular"
-                android:textSize="16sp"
-                android:drawablePadding="4dp"
-                app:layout_constraintStart_toStartOf="@+id/textView10"
-                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+                <TextView
+                    android:id="@+id/txtBranch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    app:drawableStartCompat="@drawable/ic_branch"
+                    android:fontFamily="@font/sf_pro_text_regular"
+                    android:textSize="16sp"
+                    android:drawablePadding="4dp"
+                    app:layout_constraintStart_toStartOf="@+id/textView10"
+                    app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
                 <TextView
                     android:id="@+id/textView5"
@@ -97,26 +97,26 @@
                     app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
                 <TextView
-                android:id="@+id/textView11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="Batch Year"
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Batch Year"
                     android:fontFamily="@font/sf_pro_text_light"
-                app:layout_constraintStart_toStartOf="@+id/txtBranch"
-                app:layout_constraintTop_toBottomOf="@+id/txtBranch" />
+                    app:layout_constraintStart_toStartOf="@+id/txtBranch"
+                    app:layout_constraintTop_toBottomOf="@+id/txtBranch" />
 
-            <TextView
-                android:id="@+id/txtBatchYear"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:fontFamily="@font/sf_pro_text_regular"
-                app:drawableStartCompat="@drawable/ic_people"
-                android:drawablePadding="4dp"
-                android:textSize="16sp"
-                app:layout_constraintStart_toStartOf="@+id/textView11"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+                <TextView
+                    android:id="@+id/txtBatchYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/sf_pro_text_regular"
+                    app:drawableStartCompat="@drawable/ic_people"
+                    android:drawablePadding="4dp"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/textView11"
+                    app:layout_constraintTop_toBottomOf="@+id/textView11" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>>

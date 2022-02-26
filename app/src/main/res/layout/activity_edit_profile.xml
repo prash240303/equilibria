@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#ebf9ff"
+    android:background="#f5fafc"
     android:layout_height="match_parent"
     tools:context=".EditProfile">
 
@@ -14,38 +14,35 @@
         android:layout_height="wrap_content"
         android:padding="20dp">
 
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieAnimationView"
+            android:layout_width="200dp"
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:layout_marginTop="30dp"
-            app:cardCornerRadius="120dp"
+            android:layout_height="124dp"
+            android:layout_marginTop="32dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/missing_profile_photo" />
-        </androidx.cardview.widget.CardView>
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView8"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            app:lottie_rawRes="@raw/profile_veiw_animation" />
 
         <EditText
             android:id="@+id/edtName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:fontFamily="@font/sf_pro_text_regular"
+            android:layout_marginTop="16dp"
             android:drawableStart="@drawable/ic_baseline_person_24"
             android:drawablePadding="4dp"
+            android:fontFamily="@font/sf_pro_text_regular"
 
             android:hint="Name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView"
             tools:ignore="TouchTargetSizeCheck" />
 
         <EditText
@@ -53,10 +50,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:inputType="number"
             android:drawablePadding="4dp"
             android:fontFamily="@font/sf_pro_text_regular"
             android:hint="Phone Number"
+            android:inputType="number"
             app:drawableStartCompat="@drawable/ic_phone"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -70,10 +67,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:drawablePadding="4dp"
-            android:inputType="textEmailAddress"
-            android:hint="Email id"
-            app:drawableStartCompat="@drawable/ic_baseline_email_24"
             android:fontFamily="@font/sf_pro_text_regular"
+            android:hint="Email id"
+            android:inputType="textEmailAddress"
+            app:drawableStartCompat="@drawable/ic_baseline_email_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/edtPhone"
@@ -104,18 +101,22 @@
             android:layout_height="46dp"
             android:layout_marginTop="60dp"
             android:background="@drawable/btn_background"
+            android:fontFamily="@font/sf_pro_text_bold"
             android:text="save"
             android:textColor="@color/white"
-            android:fontFamily="@font/sf_pro_text_bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardView8"
             android:layout_width="409dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="36dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -125,17 +126,17 @@
             android:layout_height="wrap_content"
 
             android:layout_marginTop="16dp"
+            android:fontFamily="@font/sf_pro_dispaly_semibold"
             android:padding="4dp"
             android:text="Branch"
-            android:fontFamily="@font/sf_pro_dispaly_semibold"
             android:textColor="@color/black"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="@+id/edtBatchYear"
             app:layout_constraintTop_toBottomOf="@+id/edtBatchYear" />
 
         <Spinner
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:id="@+id/spBranches"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:entries="@array/branches"
@@ -146,6 +147,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/textView12"
             tools:ignore="TouchTargetSizeCheck" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

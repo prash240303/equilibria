@@ -19,14 +19,16 @@
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/activity_main.xml" value="0.19791666666666666" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/activity_pomodoro.xml" value="0.19791666666666666" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/activity_profile.xml" value="0.264" />
-        <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.536" />
+        <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/activity_splash_screen.xml" value="0.264" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/activity_upload_photo.xml" value="0.2" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/add_reminder_dialog.xml" value="0.4" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/add_task_dialog.xml" value="0.4" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/add_time_dialog.xml" value="0.264" />
+        <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/announcement_dialog.xml" value="0.19791666666666666" />
+        <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/announcement_list_item.xml" value="0.536" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/community_list.xml" value="0.19791666666666666" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/content_pomodoro.xml" value="0.19791666666666666" />
-        <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/delete_account_dialog.xml" value="0.536" />
+        <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/delete_account_dialog.xml" value="0.264" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/fragment_community.xml" value="0.19791666666666666" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/fragment_home.xml" value="0.19791666666666666" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/fragment_pomodoro.xml" value="0.19791666666666666" />
@@ -41,7 +43,9 @@
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/todo_list_completed_item.xml" value="0.536" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/todo_list_item.xml" value="0.19791666666666666" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/layout/todo_list_item1.xml" value="0.19791666666666666" />
+        <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/menu/announcement_menu.xml" value="0.4" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/menu/bottom_menu.xml" value="0.2" />
+        <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/menu/menu_main.xml" value="0.19791666666666666" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
         <entry key="..\:/Hackathon Projects/ReminderApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1875" />
         <entry key="..\:/Users/admin/AndroidStudioProjects/ReminderApp/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.213" />

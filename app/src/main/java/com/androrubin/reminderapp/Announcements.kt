@@ -50,11 +50,13 @@ class Announcements:AppCompatActivity() {
     private lateinit var chats: String
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_announcements)
 
         supportActionBar?.title = "Announcements"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val bundle: Bundle? = intent.extras
         chats = bundle?.getString("chat").toString()

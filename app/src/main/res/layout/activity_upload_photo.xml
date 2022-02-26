@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ebf9ff"
+    android:background="#f5fafc"
     android:padding="15dp"
     tools:context=".UploadPhoto">
 
@@ -21,7 +21,7 @@
 
         <android.widget.Button
             android:id="@+id/selectImageBtn"
-            android:layout_width="137dp"
+            android:layout_width="130dp"
             android:layout_height="46dp"
             android:layout_marginEnd="20dp"
             android:background="@drawable/btn_background"
@@ -31,7 +31,7 @@
 
         <android.widget.Button
             android:id="@+id/uploadImageBtn"
-            android:layout_width="146dp"
+            android:layout_width="140dp"
             android:layout_height="46dp"
             android:background="@drawable/btn_background"
             android:text="Upload Image"
@@ -44,6 +44,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="center"
+        android:src="@drawable/missing_image"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

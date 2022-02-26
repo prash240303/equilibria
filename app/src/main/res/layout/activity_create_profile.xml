@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#f2fbff"
+    android:background="#f5fafc"
     android:layout_height="match_parent"
     tools:context=".CreateProfile">
 
@@ -15,38 +15,35 @@
       android:padding="20dp">
 
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginTop="30dp"
-        app:cardCornerRadius="120dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieAnimationView"
+        android:layout_width="200dp"
 
-      <ImageView
-          android:id="@+id/imageView2"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:src="@drawable/missing_profile_photo" />
-    </androidx.cardview.widget.CardView>
+        android:layout_height="124dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView7"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="false"
+        app:lottie_rawRes="@raw/profile_veiw_animation" />
 
     <EditText
         android:id="@+id/edtName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="16dp"
         android:drawableStart="@drawable/ic_baseline_person_24"
-        android:drawablePadding="4dp"
 
+        android:drawablePadding="4dp"
+        android:fontFamily="@font/sf_pro_text_regular"
         android:hint="Name"
         android:inputType="textPersonName"
-        android:fontFamily="@font/sf_pro_text_regular"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/lottieAnimationView"
         tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
@@ -55,10 +52,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
         android:drawablePadding="4dp"
+        android:fontFamily="@font/sf_pro_text_regular"
         android:hint="Phone Number"
         android:inputType="phone"
         android:maxLength="10"
-        android:fontFamily="@font/sf_pro_text_regular"
         app:drawableStartCompat="@drawable/ic_phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -72,8 +69,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
         android:drawablePadding="4dp"
-        android:hint="Email id"
         android:fontFamily="@font/sf_pro_text_regular"
+        android:hint="Email id"
         android:inputType="textEmailAddress"
         app:drawableStartCompat="@drawable/ic_baseline_email_24"
 
@@ -90,7 +87,7 @@
         android:layout_marginTop="18dp"
         android:drawableStart="@drawable/ic_people"
         android:drawablePadding="4dp"
-android:fontFamily="@font/sf_pro_text_regular"
+        android:fontFamily="@font/sf_pro_text_regular"
         android:hint="Batch Year"
         android:inputType="date"
         android:maxLength="4"
@@ -107,8 +104,8 @@ android:fontFamily="@font/sf_pro_text_regular"
         android:layout_height="49dp"
         android:layout_marginTop="96dp"
         android:background="@drawable/btn_background"
-        android:text="save"
         android:fontFamily="@font/sf_pro_dispaly_semibold"
+        android:text="save"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -116,6 +113,7 @@ android:fontFamily="@font/sf_pro_text_regular"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView7"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -128,9 +126,9 @@ android:fontFamily="@font/sf_pro_text_regular"
         android:layout_height="wrap_content"
 
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/sf_pro_dispaly_semibold"
         android:padding="4dp"
         android:text="Branch"
-        android:fontFamily="@font/sf_pro_dispaly_semibold"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/edtBatchYear"
@@ -149,6 +147,7 @@ android:fontFamily="@font/sf_pro_text_regular"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/textView12"
         tools:ignore="TouchTargetSizeCheck" />
+
 
   </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

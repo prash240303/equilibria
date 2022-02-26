@@ -79,26 +79,17 @@
                 android:text="TextView"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/lineartime"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="7dp"
-            app:layout_constraintTop_toBottomOf="@+id/lineardate">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawablePadding="4dp"
+                android:drawableTint="@color/custom_lightblue"
                 android:padding="10dp"
-                android:textColor="@color/custom_lightblue"
                 android:text="Time"
+                android:textColor="@color/custom_lightblue"
                 android:textSize="16sp"
-                app:drawableStartCompat="@drawable/ic_time"
-                android:drawableTint="@color/custom_lightblue"/>
+                app:drawableStartCompat="@drawable/ic_time" />
 
             <TextView
                 android:id="@+id/announcementTime"

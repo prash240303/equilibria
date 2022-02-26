@@ -136,20 +136,20 @@ class ChatActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val inflater=menuInflater
         inflater.inflate(R.menu.announcement_menu,menu)
-        return super.onCreateOptionsMenu(menu)
+        return true
     }
-    override fun onOptionsItemSelected(item: MenuItem):Boolean=when(item.itemId) {
-        R.id.notifybtn->{
-            val intent= Intent(this,Announcements::class.java)
-                intent.putExtra("chat",chat)
+    override fun onOptionsItemSelected(item: MenuItem):Boolean {
+        return when (item.itemId) {
+            R.id.notifybtn -> {
+                val intent = Intent(this, Announcements::class.java)
+                intent.putExtra("chat", chat)
                 startActivity(intent)
 
-            true
-        }
-        else ->{
-            false
-            super.onOptionsItemSelected(item)
+                true
+            }
+            else -> {
+                super.onOptionsItemSelected(item)
+            }
         }
     }
-
 }

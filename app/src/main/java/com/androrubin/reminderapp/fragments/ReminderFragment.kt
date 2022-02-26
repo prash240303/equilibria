@@ -49,6 +49,7 @@ class ReminderFragment : Fragment() {
         setvalue()
     }
 
+
     private fun setvalue() {
         reminderList = ArrayList()
         reminderList.clear()
