@@ -38,6 +38,7 @@
         android:layout_marginBottom="32dp"
         android:gravity="center"
         android:text="Finish"
+        android:background="@drawable/btn_background"
         android:textColor="#03A9F4"
         android:textSize="25sp"
         android:textStyle="bold"
