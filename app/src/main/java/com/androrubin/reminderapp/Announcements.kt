@@ -196,8 +196,8 @@ class Announcements:AppCompatActivity() {
 
 
 
-                val main=title.text.toString()
-                val message=desc.text.toString()
+                val main="$chats Community"
+                val message=title.text.toString()
                 if((main.isNotEmpty()) && (message.isNotEmpty())){
                     PushNotification(
                         NotificationData(main,message),
