@@ -56,6 +56,7 @@
         android:fontFamily="@font/pt_sans"
         android:text="Are you sure you want to logout \nfrom your account?"
         android:textColor="@color/black"
+        android:textAlignment="center"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

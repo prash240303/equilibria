@@ -18,6 +18,7 @@
             android:layout_height="match_parent"
             android:padding="10dp"
             android:text="TextView"
+            android:fontFamily="@font/sf_pro_text_regular"
             android:textColor="@color/black"
             android:textSize="18sp"
             android:layout_marginBottom="7dp"
@@ -39,6 +40,7 @@
                 android:padding="10dp"
                 android:textColor="@color/custom_lightblue"
                 android:text="Date"
+                android:fontFamily="@font/sf_pro_text_light"
                 android:textSize="16sp"
                 app:drawableStartCompat="@drawable/ic_date"
                 android:drawableTint="@color/custom_lightblue"/>
@@ -48,6 +50,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
+                android:fontFamily="@font/sf_pro_text_regular"
                 android:text="TextView"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
@@ -69,6 +72,7 @@
                 android:textColor="@color/custom_lightblue"
                 android:text="Time"
                 android:textSize="16sp"
+                android:fontFamily="@font/sf_pro_text_light"
                 app:drawableStartCompat="@drawable/ic_time"
                 android:drawableTint="@color/custom_lightblue"/>
 
@@ -77,6 +81,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
+                android:fontFamily="@font/sf_pro_text_regular"
                 android:text="TextView"
                 android:textColor="@color/black"
                 android:textSize="18sp" />
