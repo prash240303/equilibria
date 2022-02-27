@@ -4,18 +4,18 @@
     <item
         android:title="Reminders"
         android:id="@+id/homeFragment"
-        android:icon="@drawable/ic_reminders"
+        android:icon="@drawable/ic_check_circle"
         android:iconTint="@color/black"/>
     <item
         android:title="Communities"
         android:id="@+id/communityFragment"
-        android:icon="@drawable/ic_baseline_people_outline_24"/>
+        android:icon="@drawable/ic_people"/>
     <item
         android:title="Pomodoro"
         android:id="@+id/pomodoroFragment"
-        android:icon="@drawable/ic_baseline_timelapse_24"/>
+        android:icon="@drawable/ic_time"/>
     <item
         android:title="Profile"
         android:id="@+id/profileFragment"
-        android:icon="@drawable/ic_baseline_person_24"/>
+        android:icon="@drawable/ic_profile"/>
 </menu>
