@@ -3,8 +3,6 @@
 
 To obtain a balance between tasks and time
 
- # original repository 
- * https://github.com/Abhishek-Bharti-1/Equilibria (github repository link)
 
 
 ## Issues Faced :
@@ -89,12 +87,3 @@ Answer - No, currently that's not included in our future scope.
  
  
 
-
-
-## Creators :
-
- - Abhishek Bharti    (https://github.com/Abhishek-Bharti-1)
- - Shreya kumari      (https://github.com/SHREYA262)
- - Mehul Gupta        (https://github.com/MehulG21)
- - Prashant Prabhakar (https://github.com/prash240303)
- - Aiman              (https://github.com/Aimanzo77student)
